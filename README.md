@@ -8,7 +8,9 @@ Searching for a ping tool that could
 - with information on when the losses happen (one long pause or several short ones)
 - with subsecond timing, ideally milliseconds
 - ideally monitoring each direction separately
+
 didn't yield anything usable. 
+
 iperf was nearest, but did not provide information on when there was packet loss.
 So we decided to write our own toolset.
 Python libraries provided nearly everything needed - especially the asyncio lib has easy to use socket functions, which make sending and receiving datagrams quite easy.
