@@ -24,6 +24,8 @@ For small setups with only a handful of connections the logfiles can be evaluate
 udplisten has two modes:
 In silent mode it will only write one line if timed out, and one line if there is a jump in received packet numbers. So you will have one pair of lines per interruption.
 In plot mode (default) it will write one line per packet received, and one "timeout" line per second. This corresponds with the gnuplot script from Eric
-When doing network convergence tests, of course each listener has to write a local logfile, since interactive sessions and network shares may break. Shell scripts (thanks Eric) are responsible for one-touch starting and stopping all instances and collecting the log files.
 
+Installing:
+
+You need a running python environment. We developed and tested with Python 3.7. 
 
