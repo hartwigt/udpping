@@ -19,7 +19,7 @@ The receiver is responsible for writing a protocol file.
 Since typically many instances of both sender and listener will run on each test device (any-to-any tests), they should not consume much resources, especially not do busy waits. Also especially the listener needs a clean exit routine, so it is able to flush and close it's logfile when terminated. That's the reason for the asyncio loop construct.
 USAGE:
 Since all those redundancy failover tests typically disrupt management sessions, the programs are meant to get started, run on their own even if the shell terminates, and get killed by a script after the test. The script will collect the log files and evaluate them.
-Eric (eric@sobian.de) wrote a nice gnuplot script to graphically display the timing.
+Eric (GitHub mountarch) wrote a nice gnuplot script to graphically display the timing.
 For small setups with only a handful of connections the logfiles can be evaluated by hand.
 udplisten has two modes:
 In silent mode it will only write one line if timed out, and one line if there is a jump in received packet numbers. So you will have one pair of lines per interruption.
